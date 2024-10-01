@@ -1,0 +1,11 @@
+vim myfirstbashscript.sh
+1 #!/bin/bash
+2 USER=Ju
+3 date
+4 echo hello $USER!
+5 pwd
+6 ps --no-headers | wc -l
+7 ps ax | grep -v grep | grep bioset | wc -l
+8 ls -l /etc/passwd | awk '{print $1}'
+chmod +x myfirstbashscript.sh
+./myfirstbashscript.sh
