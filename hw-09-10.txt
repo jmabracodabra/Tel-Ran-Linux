@@ -1,0 +1,16 @@
+vim sleeper.sh
+
+#!/bin/bash
+for run in {1..10}
+do
+date +"%T"
+ps -ef | wc -l
+sleep 2
+done
+less /proc/cpuinfo >> test.txt
+cat /etc/os-release | grep -w 'NAME=' >> test.txt
+cat /etc/os-release | grep -w 'NAME=' | sed 's/.*="//' | awk '{print$1}' >> test.txt
+touch file{50..100}.txt
+
+chmod u+x sleeper.sh
+./sleeper.sh
