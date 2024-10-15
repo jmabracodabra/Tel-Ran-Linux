@@ -1,0 +1,29 @@
+#vim fullscript.sh
+#chmod u+x fullscript.sh
+
+#!/bin/bash
+echo "Hello Student!"
+echo "Please, enter your name:"
+read NAME
+echo "Welcome to terminal $NAME"
+mkdir /tmp/test/
+touch /tmp/test/mydate.txt
+date +"%T" >> /tmp/test/mydate.txt
+echo "saving data..."
+for run in {1..10}
+do
+echo $run
+sleep 0.5
+done
+echo "Data is saved. Continue work"
+df -h >> /tmp/test/mydate.txt
+mkdir /opt/mydate/
+cp /tmp/test/mydate.txt /opt/mydate/newmydate.txt
+for sprint in {1..5}
+do
+echo $sprint
+sleep 1
+done
+echo "Well done Boss"
+
+#export PATH=$PATH:/opt/130824_morning/yuliya_fralova/
