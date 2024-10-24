@@ -1,0 +1,8 @@
+#touch task_YULIYA.sh
+#chmod u+x task_YULIYA.sh
+
+#!/bin/bash
+touch {1..10}_$(date +"%d_%m_%y")
+
+crontab -e
+#*/15 * * * * /opt/130824_morning/yuliya_fralova/task_YULIYA.sh
